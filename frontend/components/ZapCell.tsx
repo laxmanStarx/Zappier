@@ -1,8 +1,9 @@
-export const ZapCell = ({ name, index }: {
+export const ZapCell = ({ name, index,onClick }: {
     name?: string;
-    index: number
+    index: number;
+    onClick: ()=>void
 }) => {
-    return <div className="border border-black  justify-center py-8 px-8 flex w-[300px] cursor-pointer">
+    return <div onClick={onClick} className="border border-black  justify-center py-8 px-8 flex w-[300px] cursor-pointer">
         <div className="flex text-xl">
             <div className="font-bold">
                 {index}

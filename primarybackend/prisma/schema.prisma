@@ -55,14 +55,14 @@ model Action {
 model AvailableAction {
   id       String @id @default(uuid())
   name     String
-  
+  image    String @default("default_image_url")
   actions  Action[]
 }
 
 model AvailableTrigger {
   id       String @id @default(uuid())
   name     String 
-  
+  image    String @default("default_image_url")
   triggers Trigger[]
 }
 
