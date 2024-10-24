@@ -44,4 +44,4 @@ app.post("/hooks/catch/:userId/:zapId", (req, res) => __awaiter(void 0, void 0, 
     });
 }));
 console.log("hellos");
-app.listen(3000);
+app.listen(3002);

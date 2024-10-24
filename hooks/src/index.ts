@@ -38,4 +38,4 @@ app.post("/hooks/catch/:userId/:zapId", async (req, res) => {
 console.log("hellos")
 
 
-app.listen(3000);
+app.listen(3002);
