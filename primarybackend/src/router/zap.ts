@@ -27,7 +27,8 @@ router.post("/", authMiddleware, async (req: any, res: any) => {
 
                     create: parsedData.data.actions.map((x, index) => ({
                         actionId: x.availableActionId,
-                        sortingOrder: index
+                        sortingOrder: index,
+                        metadata: x.actionMetadata
                     }))
 
                 }
@@ -36,7 +37,8 @@ router.post("/", authMiddleware, async (req: any, res: any) => {
         const trigger = await tx.trigger.create({
             data: {
                 triggerId: parsedData.data.availableTriggerId,
-                zapId: zap.id
+                zapId: zap.id,
+               
             }
 
         })
