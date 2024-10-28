@@ -10,12 +10,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const client_1 = require("@prisma/client");
-const client = new client_1.PrismaClient();
-const TOPIC_NAME = "zap-events";
 const kafkajs_1 = require("kafkajs");
+const TOPIC_NAME = "zap-events";
+const client = new client_1.PrismaClient();
 const kafka = new kafkajs_1.Kafka({
     clientId: 'outbox-processor',
-    brokers: ['localhost: 9092']
+    brokers: ['localhost:9092']
 });
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
